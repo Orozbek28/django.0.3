@@ -4,7 +4,7 @@
   {{ item.name }}
   <ol>
     {% for purchase in item.purchase_set.all %}
-    <li>{{ purchase.name }}-{{purchase.age}}-</li>
+    <li>{{ purchase.name }}-{{purchase.age}}-{{purchase.item}}-{{purchase.date_purchase}}</li>
     {%endfor%}
 </ol>
 </form>
