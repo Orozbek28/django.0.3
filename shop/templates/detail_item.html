@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block content %}
+<form method="POST">
+  {{ item.name }}
+  <ol>
+    {% for purchase in item.purchase_set.all %}
+    <li>{{ purchase.name }}-{{purchase.age}}-</li>
+    {%endfor%}
+</ol>
+</form>
+{% endblock content%}
